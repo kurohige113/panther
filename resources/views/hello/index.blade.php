@@ -10,6 +10,7 @@ h1 {font-size:100pt; text-align:right; color:#eee; margin:-40px 0px -50px 0px}
 <body>
     <h1>Index</h1>
     <p>{{$msg}}</p>
+    <p>ViewComposer value<br>'message'={{$view_message}}</p>
     <form method="POST" action="/hello">
         {{ csrf_field() }}
         <input type="text" name="msg">

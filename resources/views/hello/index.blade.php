@@ -11,6 +11,17 @@ h1 {font-size:100pt; text-align:right; color:#eee; margin:-40px 0px -50px 0px}
     <h1>Index</h1>
     <p>{{$msg}}</p>
     <p>ViewComposer value<br>'message'={{$view_message}}</p>
+    
+
+        <table>
+            @foreach ($data as $item)
+                <tr>
+                    <th>{{$item['name']}}</th>
+                    <td>{{$item['mail']}}</td>
+                </tr>
+            @endforeach
+        </table>
+
     <form method="POST" action="/hello">
         {{ csrf_field() }}
         <input type="text" name="msg">
